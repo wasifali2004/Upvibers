@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/Navbar";
 import LoadingWrapper from "@/components/LoadingWrapper";
 import { Component } from "@/components/spotlight-cursor";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
               <Component />
               {children}
             </LoadingWrapper>
+            <Analytics />
           </ThemeProvider>
       </body>
     </html>
